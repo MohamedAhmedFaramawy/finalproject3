@@ -1,6 +1,6 @@
 language: node_js
 node_js: 
-   - 14
+   - 13
 
 services:
   - docker
@@ -12,7 +12,7 @@ install:
 before_scripts:
   - echo "no tests. yes there will be tests"
 
-# Build image
+script:
 - docker --version # print the version for logging here.
 - docker build -t udagram-api-feed ./udagram-api-feed
 - docker build -t udagram-api-user ./udagram-api-user
@@ -29,5 +29,3 @@ before_scripts:
 - docker push mohamedahmedfaramawy/udagram-api-user:v1
 - docker push mohamedahmedfaramawy/udagram-reversproxy:v1
 - docker push mohamedahmedfaramawy/udagram-frontend:v1
-
-
