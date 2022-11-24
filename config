@@ -1,0 +1,27 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeU1URXhOakU0TVRJeU0xb1hEVE15TVRFeE16RTRNVEl5TTFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBSi96CmNxenAxeVV4OTVadjE0ZElzZDczTkNiT2F3cUV4c3VrckUzamNGZ2x5ODk1Uk5oRnczaDE4RWpDc1FkY1kySkMKWXcyWWR6eUduYnNxc2w0Z3d1anB3SUlveU5MSWI0REZKb0VJeXZhSlVseFlURlRHeHkxTVJUNmFPdE9vV0tiMQpmSjNrVm1uMnh4S2VXTjdzcUZWazd5NjNXNlJkY2xFNkxTY3p6R3dkNllyRlMyNFdOekg1TVY2M25HMlIvZjYvCk1iWHl0ak1wcVl2cExRSngwMFZhV3l3RDU1YWFINFgwOFdaWUVRbDJ2R1REWGlRbE1ucWxOcGkwblNnSzRXOHYKWXJHOUhEUUYzbWhrL1VjNnEzanQ2ZnlxdzRUSTJDNHNMRU5kOVZtaXBlMDRzd3BGQjVqUFkyV0x3dFdoaTZ4cQpFVDNjNHowRGM4ZjJTc1U1SndjQ0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZLSnpmc051SzZ2Qi9wOUxQWWF4TnFsSmNHKzVNQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFBNndlWG1Ra05RV0sydjhsV1dBQjNJcHc5RUFnT1hmakVqc0ovU0I3VmJIeW8zZlpEZApjQUhhOW03ZVpBR2JJdDd6Z1lYZDZ5R2dKQkVKT3NsN2dmemRheG1NY3M2SVNRdHpNNjhtRUs5M0E2TE1ZSHpmCkp4WXFNZHJZV0lud2JyVTJCeWNBY0w3VWxQbW1kMkdSV01NZFVhZDdLdmJTMWVyWDRoL0MrWVdrQkd3YkpNdkYKNWZDb3R4S215bmVnMlBHMEp4UkFvYTF6Z0duOUZQYUMwZEFaN04wc1RPNW1lYUV6MzdNTHI3bDJHK0UxL0xsRgpqdE9OT1Z4czA2UHB1aytMR0RtMkMwME53dVh2a3dBTUMwbFp2M25IOGNKU0ljdEl2SWtOaThnSERCT1BMVDlsCmo1REpvNHlQc3pNeXBPNW02ZXp5MDV2bjR0MW1QTjlZZmlPLwotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://1C29395A249FD30283C66056C7FF6A57.sk1.us-east-1.eks.amazonaws.com
+  name: arn:aws:eks:us-east-1:581851817977:cluster/my-project-cluster
+contexts:
+- context:
+    cluster: arn:aws:eks:us-east-1:581851817977:cluster/my-project-cluster
+    user: arn:aws:eks:us-east-1:581851817977:cluster/my-project-cluster
+  name: arn:aws:eks:us-east-1:581851817977:cluster/my-project-cluster
+current-context: arn:aws:eks:us-east-1:581851817977:cluster/my-project-cluster
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:us-east-1:581851817977:cluster/my-project-cluster
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - --region
+      - us-east-1
+      - eks
+      - get-token
+      - --cluster-name
+      - my-project-cluster
+      command: aws
